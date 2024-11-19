@@ -13,7 +13,7 @@ class SettingSeeder extends Seeder
      */
     public function run(): void
     {
-        Setting::firstOrCreate([
+        Setting::updateOrCreate([
             'id' => 1,
         ], [
             'whatsapp' => '+966502687520',
