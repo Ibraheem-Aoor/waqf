@@ -45,7 +45,7 @@
 
 <body>
     <!-- begin:: Page -->
-    <div class="overlay d-none" style="background: #30c084">
+    <div class="overlay" style="background: #30c084">
         <div class="row h-100 d-flex align-items-center">
             <div class="col-lg-4 px-5 mx-auto">
                 <div class="alert text-center">
