@@ -116,7 +116,7 @@ class WaqfResource extends Resource
                 Filter::make('color')->label(__('color')),
             ])
             ->actions([
-                CopyAction::make()->copyable(fn ($record) => $record->name)->label(__('copy'))->color(Color::Emerald),
+                CopyAction::make()->copyable(fn ($record) => route('site.home' , ['user' => $record->slug]). "\n". $record->description)->label(__('copy'))->color(Color::Emerald),
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
 

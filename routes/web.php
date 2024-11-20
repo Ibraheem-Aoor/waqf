@@ -19,8 +19,8 @@ use Illuminate\Support\Facades\Route;
 Route::group(['as' => 'site.'], function () {
 
     // Site Routes
-    Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::get('/about-us', [HomeController::class, 'about'])->name('about');
+    Route::get('/about-user', [HomeController::class, 'aboutUser'])->name('about_user');
     Route::get('/azkar', [HomeController::class, 'azkar'])->name('azkar.index');
     Route::get('/azkar/{id}', [HomeController::class, 'azkarShow'])->name('azkar.show');
     // E-Sebha
@@ -34,4 +34,6 @@ Route::group(['as' => 'site.'], function () {
         Route::get('/reciter/{id}/rewaya/{rewaya}', [QuranController::class, 'reciterSuwar'])->name('reciter.suwar');
         Route::get('/reciter/{reciter}/suwar/{sura}/rewaya/{rewaya}', [QuranController::class, 'reciterListen'])->name('reciter.listen');
     });
+    
+    Route::get('/{user?}', [HomeController::class, 'index'])->name('home');
 });

@@ -20,7 +20,7 @@
                 <div class="row">
                     <div class="col-12" id="list">
                         @foreach ($suwar as $sura)
-                            <a class="widget__item-2" href="{{ route('site.quran.index') }}" wire:key="1" data-name="{{ $sura['name'] }}">
+                            <a class="widget__item-2" href="{{ route('site.quran.sura' , $sura['id']) }}" wire:key="1" data-name="{{ $sura['name'] }}">
                                 <div class="widget__item-icon">
                                     <img src="https://waqfsawir.net/img//svg/icon-1.svg" alt="">
                                 </div>
