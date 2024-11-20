@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\SettingResource\Pages;
 
 use App\Filament\Resources\SettingResource;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\MarkdownEditor;
 use Filament\Resources\Pages\EditRecord;
 use Filament\Resources\Pages\Page;
@@ -37,6 +38,7 @@ class EditSetting extends EditRecord
                 MarkdownEditor::make('about')->required()->label(__('about')),
                 MarkdownEditor::make('about_waqf_male')->required()->label(__('about_waqf_male')),
                 MarkdownEditor::make('about_waqf_female')->required()->label(__('about_waqf_fmale')),
+                FileUpload::make('logo')->required()->label(__('logo'))->disk('public')->directory('settings'),
             ]);
     }
 

@@ -14,5 +14,7 @@ class Setting extends Model
         'about',
         'about_waqf_male',
         'about_waqf_female',
+        'logo',
     ];
+
 }
