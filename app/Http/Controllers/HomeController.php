@@ -30,4 +30,9 @@ class HomeController extends Controller
         $data['zkr'] = Azkar::query()->findOrFail(decrypt($id));
         return view('site.pages.azkar.show', $data);
     }
+
+    public function masbaha(): View
+    {
+        return view('site.pages.esbha.index');
+    }
 }

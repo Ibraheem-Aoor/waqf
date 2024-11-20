@@ -25,9 +25,9 @@
     <!--  -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="https://waqfsawir.net/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="{{ asset('css/site/bootstrap.min.css') }}" />
 
-    <link rel="stylesheet" href="https://waqfsawir.net/css/main.css" />
+    <link rel="stylesheet" href="{{ asset('css/site/main.css') }}" />
     <style>
         .menu li a.active .text,
         .menu li a:hover .text {

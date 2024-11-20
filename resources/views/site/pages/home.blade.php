@@ -41,7 +41,7 @@
                             <div class="widget__item-title text-white font-semi-bold">الأذكار</div>
                         </div>
                     </a>
-                    <a class="widget__item-1" href="https://waqfsawir.net/noh-brhym/masbaha">
+                    <a class="widget__item-1" href="{{ route('site.masbaha') }}">
                         <div class="widget__item-image"><img src="https://waqfsawir.net/img/img-4.jpeg" alt="" />
                         </div>
                         <div class="widget__item-content p-4 text-center pt-5" style="left:0">

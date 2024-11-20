@@ -37,8 +37,9 @@
                     <div class="audio-player-wrapper">
                         <audio id="audioPlayer" preload="auto" controls>
                             <source
-                                src="https://server6.mp3quran.net/akdr/{{ str_pad($sura['id'], 3, '0', STR_PAD_LEFT) }}.mp3" type="audio/mpeg">
-                            Your browser does not support the audio element.
+                                src="https://server6.mp3quran.net/akdr/{{ str_pad($sura['id'], 3, '0', STR_PAD_LEFT) }}.mp3"
+                                type="audio/mpeg">
+                            جهازك لا يدعم الملفات الصوتية
                         </audio>
                     </div>
                 </div>
@@ -54,7 +55,7 @@
     <script src="https://waqfsawir.net/js/audioplayer.js" type="text/javascript"></script>
 
     <script type="text/javascript">
-        $(document).ready(function () {
+        $(document).ready(function() {
             // Initialize the audio player with any necessary customization
             $('#audioPlayer').audioPlayer();
         });

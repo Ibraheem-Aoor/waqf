@@ -23,7 +23,10 @@ Route::group(['as' => 'site.'], function () {
     Route::get('/about-us', [HomeController::class, 'about'])->name('about');
     Route::get('/azkar', [HomeController::class, 'azkar'])->name('azkar.index');
     Route::get('/azkar/{id}', [HomeController::class, 'azkarShow'])->name('azkar.show');
+    // E-Sebha
+    Route::get('masbaha', [HomeController::class, 'masbaha'])->name('masbaha');
 
+    // Quran Routes: Suwar , Reciters and Listening to Rectiters
     Route::prefix('quran')->as('quran.')->group(function () {
         Route::get('/', [QuranController::class, 'index'])->name('index');
         Route::get('/sura/{id}', [QuranController::class, 'showSura'])->name('sura');
