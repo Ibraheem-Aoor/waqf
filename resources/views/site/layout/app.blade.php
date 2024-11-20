@@ -14,29 +14,48 @@
     <title>@yield('title')</title>
 
     <!--  -->
+    @php
 
+        $color = '#30C084';
+    @endphp
+    @isset($user)
+        @php
+
+            $color = $user->color ?? '#30C084';
+        @endphp
+    @endisset
     <!-- ios support -->
     <link rel="apple-touch-icon" href="https://waqfsawir.net/img/icon/icon-192x192.png" />
     <link rel="apple-touch-icon" href="https://waqfsawir.net/img/icon/icon-256x256.png" />
     <link rel="apple-touch-icon" href="https://waqfsawir.net/img/icon/icon-384x384.png" />
     <link rel="apple-touch-icon" href="https://waqfsawir.net/img/icon/icon-512x512.png" />
-    <meta name="apple-mobile-web-app-status-bar" content="#30C084" />
-    <meta name="theme-color" content="#30C084" />
+    <meta name="apple-mobile-web-app-status-bar" content="{{ $color }}" />
+    <meta name="theme-color" content="{{ $color }}" />
     <!--  -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="{{ asset('css/site/bootstrap.min.css') }}" />
 
     <link rel="stylesheet" href="{{ asset('css/site/main.css') }}" />
+
     <style>
+        :root {
+            --base_color: {{ $color }};
+        }
+
+        .base_color {
+            color:#fff !important;
+            background-color: {{ $color }};
+        }
+
         .menu li a.active .text,
         .menu li a:hover .text {
-            color: #30C084;
+            color: {{ $color }};
         }
 
         .menu li a.active .icon svg path,
         .menu li a:hover .icon svg path {
-            fill: #30C084;
+            fill: {{ $color }};
         }
     </style>
 
@@ -45,7 +64,7 @@
 
 <body>
     <!-- begin:: Page -->
-    <div class="overlay" style="background: #30c084">
+    <div class="overlay base_color">
         <div class="row h-100 d-flex align-items-center">
             <div class="col-lg-4 px-5 mx-auto">
                 <div class="alert text-center">
@@ -60,16 +79,14 @@
         </div>
     </div>
     <div class="app">
-        <nav class="main-nav" style="background-color:#30C084">
+        <nav class="main-nav base_color">
             <div class="container">
                 <ul class="menu">
                     <li>
                         <a class="{{ areActiveRoutes(['site.home']) }}" href="{{ route('site.home') }}">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" width="24" height="21.409"
-                                style="
-                         ">
-                                <path stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5" stroke="currentColor" width="24" height="21.409">
+                                <path stroke-linecap="round" stroke-linejoin="round" fill="#fff"
                                     d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
                             </svg>
 

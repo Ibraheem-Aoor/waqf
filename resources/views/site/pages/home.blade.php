@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row mb-3">
                 @isset($user)
-                    <div class="col-12 text-center p-2 rounded-pill" style="color:white; background-color : #30C084;">
+                    <div class="col-12 text-center p-2 rounded-pill base_color">
                         وقف/{{ $user->name }}
                     </div>
                 @endisset
