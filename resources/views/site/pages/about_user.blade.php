@@ -13,6 +13,14 @@
                     </div>
                 </div>
             </div>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="mb-2"><a class="btn-block btn btn-primary base_color" target="_blank"
+                            href="{{ $settings->donation_link }}">تصدق الآن </a></div>
+                    <div class="mb-2"><a class="btn-block btn btn-primary-light base_color"
+                            href="https://wa.me/{{ $settings->whatsapp }}">اطلب مصحف بإسمك</a></div>
+                </div>
+            </div>
         </div>
     </section>
 @endsection
