@@ -25,7 +25,7 @@ class EPanelProvider extends PanelProvider
         return $panel
             ->default()
             ->id('1')
-            ->path('1')
+            ->path('admin')
             ->login()
             ->colors([
                 'primary' => Color::Green   ,
