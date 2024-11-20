@@ -64,8 +64,8 @@
             <div class="container">
                 <ul class="menu">
                     <li>
-                        <a class="active" href="{{ route('site.home') }}">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        <a class="{{ areActiveRoutes(['site.home']) }}" href="{{ route('site.home') }}">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" width="24" height="21.409"
                                 style="
                          ">
@@ -106,7 +106,7 @@
                     </li>
                     @isset($user)
                         <li>
-                            <a class="" href="{{ route('site.about_user') }}">
+                            <a class="{{ areActiveRoutes(['site.about_user']) }}" href="{{ route('site.about_user') }}">
                                 <span class="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="14.813" height="17.413"
                                         viewBox="0 0 14.813 17.413">
@@ -126,7 +126,7 @@
                     @endisset
 
                     <li>
-                        <a class="" href="{{ route('site.about') }}">
+                        <a class="{{ areActiveRoutes(['site.about']) }}" href="{{ route('site.about') }}">
                             <span class="icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="19.177" height="17.097"
                                     viewBox="0 0 19.177 17.097">
