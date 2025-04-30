@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\QuranController;
+use App\Http\Middleware\TrackVisits;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::group(['as' => 'site.'], function () {
+Route::group(['as' => 'site.' , 'middleware' => TrackVisits::class], function () {
 
     // Site Routes
     Route::get('/about-us', [HomeController::class, 'about'])->name('about');
@@ -34,6 +35,6 @@ Route::group(['as' => 'site.'], function () {
         Route::get('/reciter/{id}/rewaya/{rewaya}', [QuranController::class, 'reciterSuwar'])->name('reciter.suwar');
         Route::get('/reciter/{reciter}/suwar/{sura}/rewaya/{rewaya}', [QuranController::class, 'reciterListen'])->name('reciter.listen');
     });
-    
+
     Route::get('/{user?}', [HomeController::class, 'index'])->name('home');
 });
