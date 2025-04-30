@@ -65,7 +65,7 @@
 
 <body>
     <!-- begin:: Page -->
-    <div class="overlay base_color d-none">
+    <div class="overlay base_color">
         <div class="row h-100 d-flex align-items-center">
             <div class="col-lg-4 px-5 mx-auto">
                 <div class="alert text-center">
